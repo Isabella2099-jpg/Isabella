@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            text-align: center;
+            background-color: #f8f4f4;
+            color: #a64d79;
+            margin: 50px;
+        }
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            max-width: 400px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #d98cb3;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #a64d79;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function showPage(page) {
+            document.querySelectorAll('.page').forEach(p => p.classList.add('hidden'));
+            document.getElementById(page).classList.remove('hidden');
+        }
+    </script>
+</head>
+<body>
+    <div class="card" id="page1">
+        <h1>💖 Mi Rey 💖</h1>
+        <p>Cualquier fecha es especial para demostrarte lo importante que eres en mi vida y el amor que siento por ti.</p>
+        <p>Eres tú. Has sido tú desde que llegaste los últimos meses, eres tú cuando despierto y duermo. Te amo.</p>
+        <button class="btn" onclick="showPage('page2')">Siguiente</button>
+    </div>
+    
+    <div class="card hidden page" id="page2">
+        <h1>¿Quieres ser mi San Valentín? 💕</h1>
+        <button class="btn" onclick="showPage('page3')">Sí</button>
+        <button class="btn" onclick="alert('Sabemos que dirás que sí 😘')">No</button>
+    </div>
+    
+    <div class="card hidden page" id="page3">
+        <h1>🎉 ¡Dijiste que síiii! 🎉</h1>
+        <p>Ponte una pinta bonita y prepárate para una noche disfrutando de las dos cosas que más te gustan, estoy segura que te sorprenderás.</p>
+        <p><strong>Fecha:</strong> Fin de semana del 14 de febrero</p>
+        <p><strong>Pista:</strong> Hay que llegar al lugar rodando 🏍️</p>
+    </div>
+</body>
+</html>
